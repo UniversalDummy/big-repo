@@ -1,0 +1,76 @@
+@media (max-width: 600px) {
+    .taskInputContainer {
+      min-width: 200px;
+      max-width: 400px;  
+      justify-self: center;
+      border: solid;
+    }
+    .tasksContainer {
+      width: 445px;
+      justify-self: center;
+    }
+    .tasksContainer .task {
+      min-height: 100px;
+      max-height: 500px;
+    }
+     .textHalf {
+      max-width: 85%;
+      height: 100%;
+      text-wrap: wrap;
+      display: flex;
+      align-items: center;
+    }
+    #taskInput {
+      padding-right: 36px;
+    }
+    form label {
+      padding: 1.5px;
+      border-radius: 25px;
+    }
+  }
+
+  @media (max-width: 510px) {
+    .taskInputContainer {
+      border: none;
+        font-size: 90%;
+        width: 60%;
+        background: transparent;
+    }
+    form #taskInput {
+        width: 200px;
+        font-family: Playfair Display;
+    }
+
+    .taskInputContainer .taskEnterBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .taskEnterBtn ion-icon {
+        font-size: 1rem;
+    }
+  }
+
+
+  @media (max-width: 440px) {
+    .taskInputContainer {
+      max-width: 300px;
+    }
+    .tasksContainer {
+      width: 330px;
+    }
+    .tasks {
+      width: 310px;
+    }
+    form label {
+      width: 50px;
+      background-color: red;
+  }
+  form {
+    margin-left: 5px;
+  }
+  .taskEnterBtn {
+    padding: 0 8px 0 8px;
+  }
+}

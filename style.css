@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding-top: 30px;
+  /* background-color: #e5e5f7;
+  opacity: 0.9;
+  background-image: radial-gradient(#000000 1px, #e5e5f7 1px);
+  background-size: 20px 20px; */
+  /* https://grabient.com/HQVgzAHANKDsCcMQAYCMUC0rhldHs6GywATMvqvLDKajTgGxhSnCMQvKvDLwAsMXCCFoo2fqRFZQ8CEA?angle=225 */
+background-size: cover;
+background-repeat: no-repeat;
+background: linear-gradient(225deg, #abc8de 0.000%, #c7c9d8 16.667%, #e5cccf 33.333%, #ffd3c7 50.000%, #ffdbc2 66.667%, #ffe4c0 83.333%, #ffedc3 100.000%);
+}
+
+
+.glass-card {
+  width: 240px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
+
+}
+
+
+:root {
+  --fallOrange: #DC965A;
+  --fallDarkBrown: #242325;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  top: 0%;
+  height: 50px;
+}
+
+.navbar img {
+  width: 35px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+h2, p {
+  font-family: Inter;
+  margin: 0;
+  margin-top: 5px;
+}
+
+
+
+.taskInputContainer {
+  background-color: white;
+  width: 600px;
+  border-radius: 10px;
+  margin-top: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.tasksContainer {
+  max-width: 750px;
+  min-width: 300px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  height: 100px;
+}
+
+form #taskInput {
+  width: 85%;
+  max-width: 800px;
+  min-width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 1px;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+#taskInput {
+  padding-right: 42px;
+}
+
+form #taskInput::placeholder {
+  font-family: Poppins;
+}
+
+form label {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editing {
+  border: dotted 1px;
+}
+
+label ion-icon {
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.taskButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.taskButtons ion-icon {
+  cursor: pointer;
+}
+
+.taskEnterBtn {
+  color: white;
+  background-color: black;
+  position: relative;
+  z-index: 2;
+  right: 40px;
+}
+
+.tagBtn {
+  position: relative;
+  right: 30px;
+}
+
+.tagBtn ion-icon {
+  font-size: 35px;
+  font-weight: light;
+}
+
+input[type="checkbox"] {
+  justify-self: flex-start;
+}
+
+.task label {
+  justify-self: flex-start;
+}
+
+
+.task {
+  height: 60px;
+  transition: 0.3s;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 635px;
+  overflow-x: hidden;
+  animation: appear 0.3s;
+  background: rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.task input[type="checkbox"] {
+  width: 50px;
+  accent-color: #2293da;
+}
+
+.task input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.task label {
+  font-family: Playfair Display;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  position: relative;
+  justify-self: flex-end;
+  z-index: 4;
+  padding: 10px;
+  transition: 200ms;
+  border-radius: 10px;
+}
+
+.deleteBtn:hover {
+  color: red;
+}
+
+.TimeImg {
+  position: absolute;
+  z-index: -2;
+  width: 300px;
+  top: 9.8px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation: rise 1000ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    top: 90px;
+  }
+}
